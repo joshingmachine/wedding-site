@@ -1,0 +1,28 @@
+{
+  "name": "wedding-site",
+  "version": "1.0.0",
+  "description": "Website for my wedding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshingmachine/wedding-site.git"
+  },
+  "author": "joshingmachine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joshingmachine/wedding-site/issues"
+  },
+  "homepage": "https://github.com/joshingmachine/wedding-site#readme",
+  "devDependencies": {
+    "dotenv": "^6.0.0",
+    "eslint": "^4.18.2",
+    "eslint-config-joshingmachine": "^0.6.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.11.1",
+    "prettier-config-joshingmachine": "^0.2.0"
+  }
+}
