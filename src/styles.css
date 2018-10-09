@@ -1,0 +1,90 @@
+body {
+    background-color: gray;
+    color: white;
+    font-size: 18px;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+}
+
+span + span:before {
+    content: '\00b7  ';
+}
+
+h1, h2 {
+    font-family: 'Homemade Apple', cursive;
+    font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+iframe {
+    border: 0;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    max-width: 400px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    align-items: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 105vh;
+    position: relative;
+    text-align: center;
+    width: 100vw;
+}
+
+.hero:before {
+    background: rgba(0, 0, 0, 0.60);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.hero--1 {
+    background-image: url($HERO_1_IMAGE);
+}
+
+.hero--2 {
+    background-image: url($HERO_2_IMAGE);
+}
+
+.hero--3 {
+    background-image: url($HERO_3_IMAGE);
+}
+
+.content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    height: 100%;
+    min-height: 30vh;
+    justify-content: center;
+    z-index: 1;
+}

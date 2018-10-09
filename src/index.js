@@ -13,11 +13,6 @@ if (configResult.error) {
     throw configResult.error
 }
 
-// eslint-disable-next-line no-sync
-const rawContent = fs.readFileSync('src/index.html', {
-    encoding: 'utf8',
-})
-
 const configVars = Object.keys(configResult.parsed)
 
 const replacePlaceholder = (fileData, configVar) => {
@@ -29,7 +24,17 @@ const replacePlaceholder = (fileData, configVar) => {
     )
 }
 
-const fileContent = configVars.reduce(replacePlaceholder, rawContent)
+const handleFile = fileName => {
+    // eslint-disable-next-line no-sync
+    const rawContent = fs.readFileSync(`src/${fileName}`, {
+        encoding: 'utf8',
+    })
+
+    const fileContent = configVars.reduce(replacePlaceholder, rawContent)
+
+    // eslint-disable-next-line no-sync
+    fs.writeFileSync(`${outputDir}/${fileName}`, fileContent)
+}
 
 // eslint-disable-next-line no-sync
 if (!fs.existsSync(outputDir)) {
@@ -37,5 +42,5 @@ if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir)
 }
 
-// eslint-disable-next-line no-sync
-fs.writeFileSync(`${outputDir}/index.html`, fileContent)
+handleFile('index.html')
+handleFile('styles.css')
