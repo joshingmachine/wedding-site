@@ -1,4 +1,5 @@
 const fs = require('fs')
+const outputDir = 'dist'
 
 const configPath =
     // eslint-disable-next-line no-process-env
@@ -30,4 +31,11 @@ const replacePlaceholder = (fileData, configVar) => {
 
 const fileContent = configVars.reduce(replacePlaceholder, rawContent)
 
-console.log(fileContent)
+// eslint-disable-next-line no-sync
+if (!fs.existsSync(outputDir)) {
+    // eslint-disable-next-line no-sync
+    fs.mkdirSync(outputDir)
+}
+
+// eslint-disable-next-line no-sync
+fs.writeFileSync(`${outputDir}/index.html`, fileContent)
