@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>TITLE</title>
+        <title>$TITLE</title>
         <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
         <style>
@@ -75,15 +75,15 @@
             }
 
             .hero--1 {
-                background-image: url(HERO_1_IMAGE);
+                background-image: url($HERO_1_IMAGE);
             }
 
             .hero--2 {
-                background-image: url(HERO_2_IMAGE);
+                background-image: url($HERO_2_IMAGE);
             }
 
             .hero--3 {
-                background-image: url(HERO_3_IMAGE);
+                background-image: url($HERO_3_IMAGE);
             }
 
             .content {
@@ -104,7 +104,7 @@
         <main>
             <div class="hero hero--1">
                 <div class="content">
-                    <h1>TITLE</h1>
+                    <h1>$TITLE</h1>
                     <nav>
                         <span><a href="#when">When</a></span>
                         <span><a href="#where">Where</a></span>
@@ -117,7 +117,7 @@
             <section class="hero hero--2" id="when">
                 <div class="content">
                     <h2>When</h2>
-                    <time>DATE_TIME</time>
+                    <time>$DATE_TIME</time>
                     <button onclick="alert('Doesn\'t work yet, but that would be cool, right?')">Add to Calendar</button>
                 </div>
             </section>
@@ -125,16 +125,16 @@
                 <div class="content">
                     <h2>Where</h2>
                     <address>
-                        LOCATION_NAME<br>
-                        LOCATION_ADDRESS_1<br>
-                        LOCATION_ADDRESS_2
+                        $LOCATION_NAME<br>
+                        $LOCATION_ADDRESS_1<br>
+                        $LOCATION_ADDRESS_2
                     </address>
-                    <a href="LOCATION_SITE">Website</a>
-                    <a href="LOCATION_INSTAGRAM">Instagram</a>
+                    <a href="$LOCATION_SITE">Website</a>
+                    <a href="$LOCATION_INSTAGRAM">Instagram</a>
                 </div>
                 <div class="content">
                     <iframe
-                        src="https://www.google.com/maps/embed/v1/place?GOOGLE_MAPS_EMBED_PARAMS"
+                        src="https://www.google.com/maps/embed/v1/place?$GOOGLE_MAPS_EMBED_PARAMS"
                         allowfullscreen>
                     </iframe>
                 </div>
@@ -142,7 +142,7 @@
             <section class="hero hero--3" id="details">
                 <div class="content">
                     <h2>Event Details</h2>
-                    <a href="FACEBOOK_EVENT">Facebook Event</a>
+                    <a href="$FACEBOOK_EVENT">Facebook Event</a>
                 </div>
             </section>
             <section class="hero hero--1" id="gifts">
