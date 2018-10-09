@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TITLE</title>
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+        <style>
+            body {
+                background-color: gray;
+                color: white;
+                font-size: 18px;
+                scroll-behavior: smooth;
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                color: white;
+            }
+
+            span + span:before {
+                content: '\00b7  ';
+            }
+
+            h1, h2 {
+                font-family: 'Homemade Apple', cursive;
+                font-family: 'Dancing Script', cursive;
+            }
+
+            h1 {
+                font-size: 4rem;
+            }
+
+            h2 {
+                font-size: 3rem;
+            }
+
+            iframe {
+                border: 0;
+                height: 100%;
+                width: 100%;
+            }
+
+            button {
+                cursor: pointer;
+                max-width: 400px;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .hero {
+                align-items: center;
+                background-size: cover;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                min-height: 105vh;
+                position: relative;
+                text-align: center;
+                width: 100vw;
+            }
+
+            .hero:before {
+                background: rgba(0, 0, 0, 0.60);
+                bottom: 0;
+                content: '';
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .hero--1 {
+                background-image: url(HERO_1_IMAGE);
+            }
+
+            .hero--2 {
+                background-image: url(HERO_2_IMAGE);
+            }
+
+            .hero--3 {
+                background-image: url(HERO_3_IMAGE);
+            }
+
+            .content {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                flex: 1 0 auto;
+                height: 100%;
+                min-height: 30vh;
+                justify-content: center;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class="hero hero--1">
+                <div class="content">
+                    <h1>TITLE</h1>
+                    <nav>
+                        <span><a href="#when">When</a></span>
+                        <span><a href="#where">Where</a></span>
+                        <span><a href="#details">Event Details</a></span>
+                        <span><a href="#gifts">Gifts</a></span>
+                        <span><a href="#rsvp">RSVP</a></span>
+                    </nav>
+                </div>
+            </div>
+            <section class="hero hero--2" id="when">
+                <div class="content">
+                    <h2>When</h2>
+                    <time>DATE_TIME</time>
+                    <button onclick="alert('Doesn\'t work yet, but that would be cool, right?')">Add to Calendar</button>
+                </div>
+            </section>
+            <section class="hero" id="where">
+                <div class="content">
+                    <h2>Where</h2>
+                    <address>
+                        LOCATION_NAME<br>
+                        LOCATION_ADDRESS_1<br>
+                        LOCATION_ADDRESS_2
+                    </address>
+                    <a href="LOCATION_SITE">Website</a>
+                    <a href="LOCATION_INSTAGRAM">Instagram</a>
+                </div>
+                <div class="content">
+                    <iframe
+                        src="https://www.google.com/maps/embed/v1/place?GOOGLE_MAPS_EMBED_PARAMS"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+            <section class="hero hero--3" id="details">
+                <div class="content">
+                    <h2>Event Details</h2>
+                    <a href="FACEBOOK_EVENT">Facebook Event</a>
+                </div>
+            </section>
+            <section class="hero hero--1" id="gifts">
+                <div class="content">
+                    <h2>Gifts</h2>
+                    <span>We're registered at</span><br>
+                    <span><a href="#">Amazon</a>,</span><br>
+                    <span><a href="#">Etsy</a>, and</span><br>
+                    <a href="#">Wayfair</a>
+                    <span><i>or</i>, feel free to contribute to our</span><br>
+                    <span>🏖️ <a href="#">honemoon fund</a> 🏖️</span>
+                </div>
+            </section>
+            <section class="hero hero--2" id="rsvp">
+                <div class="content">
+                    <h2>RSVP</h2>
+                    <a href="#">Click here</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
