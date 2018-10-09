@@ -7,3 +7,4 @@ require('dotenv').config({
 })
 
 console.log(process.env.TITLE)
+console.log(process.env.DATE_TIME)
