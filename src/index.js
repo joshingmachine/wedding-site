@@ -3,7 +3,7 @@ const outputDir = 'dist'
 
 const configPath =
     // eslint-disable-next-line no-process-env
-    process.env.NODE_ENV === 'production' ? '.env' : '.env.public'
+    process.env.NODE_ENV === 'production' ? '.env' : '.env.default'
 
 const configResult = require('dotenv').config({
     path: configPath,
