@@ -80,13 +80,16 @@ main {
     background-image: url($HERO_1_IMAGE);
 }
 
-.hero--2,
-.hero--5 {
+.hero--2 {
     background-image: url($HERO_2_IMAGE);
 }
 
 .hero--3 {
     background-image: url($HERO_3_IMAGE);
+}
+
+.hero--5 {
+    background-image: url($HERO_5_IMAGE);
 }
 
 .content {
