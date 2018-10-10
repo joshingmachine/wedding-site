@@ -8,21 +8,20 @@
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-        </header>
         <main>
-            <div class="hero hero--1">
+            <section class="hero hero--1">
                 <div class="content">
                     <h1>$TITLE</h1>
-                    <nav>
-                        <span><a href="#when">When</a></span>
-                        <span><a href="#where">Where</a></span>
-                        <span><a href="#details">Event Details</a></span>
-                        <span><a href="#gifts">Gifts</a></span>
-                        <span><a href="#rsvp">RSVP</a></span>
+                    <nav class="site-nav">
+                        <span class="site-nav__section"><a href="#when">When</a></span>
+                        <span class="site-nav__section"><a href="#where">Where</a></span>
+                        <span class="site-nav__section"><a href="#details">Event Details</a></span>
+                        <span class="site-nav__section"><a href="#gifts">Gifts</a></span>
+                        <span class="site-nav__section"><a href="#rsvp">RSVP</a></span>
                     </nav>
                 </div>
-            </div>
+            </section>
+
             <section class="hero hero--2" id="when">
                 <div class="content">
                     <h2>When</h2>
@@ -30,6 +29,7 @@
                     <button onclick="alert('Doesn\'t work yet, but that would be cool, right?')">Add to Calendar</button>
                 </div>
             </section>
+
             <section class="hero" id="where">
                 <div class="content">
                     <h2>Where</h2>
@@ -48,13 +48,15 @@
                     </iframe>
                 </div>
             </section>
-            <section class="hero hero--3" id="details">
+
+            <section class="hero hero--3 hero--light" id="details">
                 <div class="content">
                     <h2>Event Details</h2>
                     <a href="$FACEBOOK_EVENT">Facebook Event</a>
                 </div>
             </section>
-            <section class="hero hero--1" id="gifts">
+
+            <section class="hero hero--4" id="gifts">
                 <div class="content">
                     <h2>Gifts</h2>
                     <span>We're registered at</span><br>
@@ -65,14 +67,13 @@
                     <span>🏖️ <a href="#">honemoon fund</a> 🏖️</span>
                 </div>
             </section>
-            <section class="hero hero--2" id="rsvp">
+
+            <section class="hero hero--5" id="rsvp">
                 <div class="content">
                     <h2>RSVP</h2>
                     <a href="#">Click here</a>
                 </div>
             </section>
         </main>
-        <footer>
-        </footer>
     </body>
 </html>

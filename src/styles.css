@@ -11,12 +11,11 @@ a {
     color: white;
 }
 
-span + span:before {
+.site-nav__section + .site-nav__section:before {
     content: '\00b7  ';
 }
 
 h1, h2 {
-    font-family: 'Homemade Apple', cursive;
     font-family: 'Dancing Script', cursive;
 }
 
@@ -46,6 +45,7 @@ main {
 
 .hero {
     align-items: center;
+    background-position: center;
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
@@ -66,11 +66,22 @@ main {
     top: 0;
 }
 
-.hero--1 {
+.hero--light,
+.hero--light a {
+    color: black;
+}
+
+.hero--light:before {
+    background: rgba(0, 0, 0, 0.10);
+}
+
+.hero--1,
+.hero--4 {
     background-image: url($HERO_1_IMAGE);
 }
 
-.hero--2 {
+.hero--2,
+.hero--5 {
     background-image: url($HERO_2_IMAGE);
 }
 
