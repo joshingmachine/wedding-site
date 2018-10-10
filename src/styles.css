@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: #444;
     color: white;
     font-size: 18px;
     scroll-behavior: smooth;
@@ -10,6 +10,12 @@ body {
 a {
     color: white;
     display: inline;
+}
+
+.site-nav {
+    padding: 5px;
+    position: sticky;
+    top: 5px;
 }
 
 .site-nav__section + .site-nav__section:before {
@@ -42,6 +48,7 @@ button {
 main {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .hero {
@@ -55,6 +62,7 @@ main {
     position: relative;
     text-align: center;
     width: 100vw;
+    z-index: 0;
 }
 
 .hero:before {
@@ -77,8 +85,14 @@ main {
 }
 
 .hero--1,
-.hero--4 {
+.hero--5 {
     background-image: url($HERO_1_IMAGE);
+}
+
+.hero--1 {
+    position: sticky;
+    top: -100%;
+    z-index: 1;
 }
 
 .hero--2 {
@@ -86,20 +100,30 @@ main {
 }
 
 .hero--3 {
-    background-image: url($HERO_3_IMAGE);
+    margin-top: -44px;
+    padding-top: 44px;
 }
 
-.hero--5 {
-    background-image: url($HERO_5_IMAGE);
+.hero--3:before {
+    background: rgba(0, 0, 0, 0);
+}
+
+.hero--4 {
+    background-image: url($HERO_4_IMAGE);
+}
+
+.hero--6 {
+    background-image: url($HERO_6_IMAGE);
 }
 
 .content {
     align-items: center;
     display: flex;
     flex-direction: column;
-    flex: 1 0 auto;
+    flex: 1 0;
     height: 100%;
     min-height: 30vh;
     justify-content: center;
+    width: 100%;
     z-index: 1;
 }
