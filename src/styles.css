@@ -9,6 +9,7 @@ body {
 
 a {
     color: white;
+    display: inline;
 }
 
 .site-nav__section + .site-nav__section:before {
