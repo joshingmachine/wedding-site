@@ -11,6 +11,13 @@ AWS.config.update({
 const s3 = new AWS.S3()
 const outputDir = 'dist'
 
+const getContentType = fileType =>
+    ({
+        css: 'text/css',
+        html: 'text/html',
+        jpg: 'image/jpeg',
+    }[fileType])
+
 const uploadFile = fileName => {
     const fileType = fileName.split('.')[1]
     const filePath = path.join(outputDir, fileName)
@@ -18,7 +25,7 @@ const uploadFile = fileName => {
     const params = {
         Body: fs.readFileSync(filePath),
         Bucket: process.env.S3_BUCKET,
-        ContentType: `text/${fileType}`,
+        ContentType: getContentType(fileType),
         Key: fileName,
     }
 

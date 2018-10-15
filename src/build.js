@@ -1,4 +1,6 @@
 const fs = require('fs')
+const path = require('path')
+const assetsDir = 'assets'
 const outputDir = 'dist'
 const envConfig = require('./config.js').getEnvConfig()
 
@@ -33,3 +35,14 @@ if (!fs.existsSync(outputDir)) {
 
 handleFile('index.html')
 handleFile('styles.css')
+
+const moveAsset = fileName => {
+    const originalFilePath = path.join(assetsDir, fileName)
+    const destinationFilePath = path.join(outputDir, fileName)
+
+    // eslint-disable-next-line no-sync
+    fs.copyFileSync(originalFilePath, destinationFilePath)
+}
+
+// eslint-disable-next-line no-sync
+fs.readdirSync(assetsDir).forEach(moveAsset)
