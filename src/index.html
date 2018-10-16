@@ -10,52 +10,62 @@
     </head>
     <body>
         <main>
-            <section class="hero hero--1">
-                <div class="content">
-                    <h1>$TITLE</h1>
-                    <nav class="site-nav">
-                        <span class="site-nav__section"><a href="#about">About</a></span>
-                        <span class="site-nav__section"><a href="#when">When</a></span>
-                        <span class="site-nav__section"><a href="#where">Where</a></span>
-                        <span class="site-nav__section"><a href="#details">Event Details</a></span>
-                        <span class="site-nav__section"><a href="#gifts">Gifts</a></span>
-                        <span class="site-nav__section"><a href="#rsvp">RSVP</a></span>
-                    </nav>
+            <section class="row row--1">
+                <div class="row__cell">
+                    <div class="row__cell-content">
+                        <h1>$TITLE</h1>
+                        <nav class="site-nav">
+                            <span class="site-nav__section"><a href="#about">About</a></span>
+                            <span class="site-nav__section"><a href="#when">When</a></span>
+                            <span class="site-nav__section"><a href="#where">Where</a></span>
+                            <span class="site-nav__section"><a href="#details">Event Details</a></span>
+                            <span class="site-nav__section"><a href="#gifts">Gifts</a></span>
+                            <span class="site-nav__section"><a href="#rsvp">RSVP</a></span>
+                        </nav>
+                    </div>
                 </div>
             </section>
 
-            <section class="hero hero--3" id="about">
-                <div class="content">
+            <section class="row row--reverse" id="about">
+                <div class="row__cell">
+                    <div class="row__cell-content">
+                        <h2>About</h2>
+                        $ABOUT_TEXT
+                    </div>
+                </div>
+
+                <div class="row__cell">
                     <img alt="The happy couple <3" src="$ABOUT_IMAGE" />
                 </div>
+            </section>
 
-                <div class="content">
-                    <h2>About</h2>
-                    $ABOUT_TEXT
+            <section class="row row--2 row--light" id="when">
+                <div class="row__cell">
+                    <div class="row__cell-content">
+                        <h2>When</h2>
+                        <time>$DATE_TIME</time>
+                        <div>
+                            <button onclick="alert('Doesn\'t work yet, but that would be cool, right?')">Add to Calendar</button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="hero hero--2 hero--light" id="when">
-                <div class="content">
-                    <h2>When</h2>
-                    <time>$DATE_TIME</time>
-                    <button onclick="alert('Doesn\'t work yet, but that would be cool, right?')">Add to Calendar</button>
-                </div>
-            </section>
-
-            <section class="hero hero--3" id="where">
-                <div class="content">
-                    <h2>Where</h2>
-                    <address>
-                        $LOCATION_NAME<br>
-                        $LOCATION_ADDRESS_1<br>
-                        $LOCATION_ADDRESS_2
-                    </address>
-                    <a href="$LOCATION_SITE">Website</a>
-                    <a href="$LOCATION_INSTAGRAM">Instagram</a>
+            <section class="row row--3" id="where">
+                <div class="row__cell">
+                    <div class="row__cell-content">
+                        <h2>Where</h2>
+                        <address>
+                            $LOCATION_NAME<br>
+                            $LOCATION_ADDRESS_1<br>
+                            $LOCATION_ADDRESS_2
+                        </address>
+                        <a href="$LOCATION_SITE">Website</a>
+                        <a href="$LOCATION_INSTAGRAM">Instagram</a>
+                    </div>
                 </div>
 
-                <div class="content">
+                <div class="row__cell">
                     <iframe
                         src="https://www.google.com/maps/embed/v1/place?$GOOGLE_MAPS_EMBED_PARAMS"
                         allowfullscreen>
@@ -63,37 +73,43 @@
                 </div>
             </section>
 
-            <section class="hero hero--4" id="details">
-                <div class="content">
-                    <h2>Event Details</h2>
-                    <a href="$FACEBOOK_EVENT">Facebook Event</a>
-                    <section>
-                        <h3>Attire</h3>
-                        <p>Attire is cocktail casual. Please dress for a primarily outdoor venue.</p>
-                    </section>
+            <section class="row row--4" id="details">
+                <div class="row__cell">
+                    <div class="row__cell-content">
+                        <h2>Event Details</h2>
+                        <a href="$FACEBOOK_EVENT">Facebook Event</a>
+                        <section>
+                            <h3>Attire</h3>
+                            <p>Attire is cocktail casual. Please dress for a primarily outdoor venue.</p>
+                        </section>
+                    </div>
                 </div>
             </section>
 
-            <section class="hero hero--3" id="gifts">
-                <div class="content">
+            <section class="row row--reverse" id="gifts">
+                <div class="row__cell">
+                    <div class="row__cell-content">
+                        <h2>Gifts</h2>
+                        <span>We're registered at</span><br>
+                        <span><a href="$AMAZON_REGISTRY_URL">Amazon</a>, <a href="$ETSY_REGISTRY_URL">Etsy</a>, <a href="$WAYFAIR_REGISTRY_URL">Wayfair</a>, and <a href="$WEST_ELM_REGISTRY_URL">West Elm</a>,</span><br>
+                        <span><i>or</i></span><br>
+                        <span>your gift to our <a href="$NEWLYWED_FUND_URL">newlywed fund</a></span><br>
+                        <span>would be greatly appreciated.</span>
+                    </div>
+                </div>
+
+                <div class="row__cell">
                     <img alt="" src="" />
                 </div>
-
-                <div class="content">
-                    <h2>Gifts</h2>
-                    <span>We're registered at</span><br>
-                    <span><a href="$AMAZON_REGISTRY_URL">Amazon</a>, <a href="$ETSY_REGISTRY_URL">Etsy</a>, <a href="$WAYFAIR_REGISTRY_URL">Wayfair</a>, and <a href="$WEST_ELM_REGISTRY_URL">West Elm</a>,</span><br>
-                    <span><i>or</i></span><br>
-                    <span>your gift to our <a href="$NEWLYWED_FUND_URL">newlywed fund</a></span><br>
-                    <span>would be greatly appreciated.</span>
-                </div>
             </section>
 
-            <section class="hero hero--6 hero--light" id="rsvp">
-                <div class="content">
-                    <h2>RSVP</h2>
-                    <p>In order to allow all guests, including parents, an evening of relaxation we have chosen for our wedding day to be an adult only occasion. We hope this advance notice means you are still able to share our big day and will enjoy having the evening off!</p>
-                    <a href="#">Click here to RSVP</a>
+            <section class="row row--6 row--light" id="rsvp">
+                <div class="row__cell">
+                    <div class="row__cell-content">
+                        <h2>RSVP</h2>
+                        <p>In order to allow all guests, including parents, an evening of relaxation we have chosen for our wedding day to be an adult only occasion. We hope this advance notice means you are still able to share our big day and will enjoy having the evening off!</p>
+                        <a href="#">Click here to RSVP</a>
+                    </div>
                 </div>
             </section>
         </main>
