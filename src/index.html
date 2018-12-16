@@ -10,62 +10,56 @@
     </head>
     <body>
         <main>
-            <section class="row row--1">
-                <div class="row__cell">
-                    <div class="row__cell-content">
-                        <h1>$TITLE</h1>
-                        <nav class="site-nav">
-                            <span class="site-nav__section"><a href="#about">About</a></span>
-                            <span class="site-nav__section"><a href="#when">When</a></span>
-                            <span class="site-nav__section"><a href="#where">Where</a></span>
-                            <span class="site-nav__section"><a href="#details">Event Details</a></span>
-                            <span class="site-nav__section"><a href="#gifts">Gifts</a></span>
-                            <span class="site-nav__section"><a href="#rsvp">RSVP</a></span>
-                        </nav>
-                    </div>
+            <section class="row row--title">
+                <div>
+                    <h1>$TITLE</h1>
+                    <nav class="site-nav">
+                        <span class="site-nav__section"><a href="#details">Event Details</a></span>
+                        <span class="site-nav__section"><a href="#location">Location</a></span>
+                        <span class="site-nav__section"><a href="#gifts">Gifts</a></span>
+                        <span class="site-nav__section"><a href="#rsvp">RSVP</a></span>
+                    </nav>
                 </div>
             </section>
 
-            <section class="row row--reverse" id="about">
-                <div class="row__cell">
-                    <div class="row__cell-content">
-                        <h2>About</h2>
-                        $ABOUT_TEXT
-                    </div>
+            <section class="row row--about" id="about">
+                <div class="wrapper--about-text">
+                    $ABOUT_TEXT
                 </div>
 
-                <div class="row__cell">
+                <div class="wrapper--about-img">
                     <img alt="The happy couple <3" src="$ABOUT_IMAGE" />
                 </div>
             </section>
 
-            <section class="row row--2 row--light" id="when">
-                <div class="row__cell">
-                    <div class="row__cell-content">
-                        <h2>When</h2>
+            <section class="row row--details" id="details">
+                <div>
+                    <h2>Event Details</h2>
+                    <section>
+                        <h3>When</h3>
                         <time>$DATE_TIME</time>
-                        <div>
-                            <button onclick="alert('Doesn\'t work yet, but that would be cool, right?')">Add to Calendar</button>
-                        </div>
-                    </div>
+                    </section>
+                    <section>
+                        <h3>Dress</h3>
+                        <p>Attire is cocktail casual. Please be prepared for a primarily outdoor venue.</p>
+                    </section>
+                    <a href="$FACEBOOK_PAGE" rel="noopener noreferrer" target="_blank">Facebook Page</a>
                 </div>
             </section>
 
-            <section class="row row--3" id="where">
-                <div class="row__cell">
-                    <div class="row__cell-content">
-                        <h2>Where</h2>
-                        <address>
-                            $LOCATION_NAME<br>
-                            $LOCATION_ADDRESS_1<br>
-                            $LOCATION_ADDRESS_2
-                        </address>
-                        <a href="$LOCATION_SITE">Website</a>
-                        <a href="$LOCATION_INSTAGRAM">Instagram</a>
-                    </div>
+            <section class="row row--location" id="location">
+                <div>
+                    <h2>Location</h2>
+                    <address>
+                        $LOCATION_NAME<br>
+                        $LOCATION_ADDRESS_1<br>
+                        $LOCATION_ADDRESS_2
+                    </address>
+                    <a href="$LOCATION_SITE" rel="noopener noreferrer" target="_blank">Website</a>
+                    <a href="$LOCATION_INSTAGRAM" rel="noopener noreferrer" target="_blank">Instagram</a>
                 </div>
 
-                <div class="row__cell">
+                <div class="wrapper--location-map">
                     <iframe
                         src="https://www.google.com/maps/embed/v1/place?$GOOGLE_MAPS_EMBED_PARAMS"
                         allowfullscreen>
@@ -73,43 +67,23 @@
                 </div>
             </section>
 
-            <section class="row row--4" id="details">
-                <div class="row__cell">
-                    <div class="row__cell-content">
-                        <h2>Event Details</h2>
-                        <a href="$FACEBOOK_EVENT">Facebook Event</a>
-                        <section>
-                            <h3>Attire</h3>
-                            <p>Attire is cocktail casual. Please dress for a primarily outdoor venue.</p>
-                        </section>
-                    </div>
+            <section class="row row--gifts" id="gifts">
+                <div>
+                    <h2>Gifts</h2>
+                    <span>We're registered at</span><br>
+                    <span><a href="$AMAZON_REGISTRY_URL" rel="noopener noreferrer" target="_blank">Amazon</a>, <a href="$ETSY_REGISTRY_URL" rel="noopener noreferrer" target="_blank">Etsy</a>, and <a href="$WEST_ELM_REGISTRY_URL" rel="noopener noreferrer" target="_blank">West Elm</a>,</span><br>
+                    <span><i>or</i></span><br>
+                    <span>your gift to our <a href="$NEWLYWED_FUND_URL" rel="noopener noreferrer" target="_blank">newlywed fund</a></span><br>
+                    <span>would be greatly appreciated.</span>
                 </div>
+
             </section>
 
-            <section class="row row--reverse" id="gifts">
-                <div class="row__cell">
-                    <div class="row__cell-content">
-                        <h2>Gifts</h2>
-                        <span>We're registered at</span><br>
-                        <span><a href="$AMAZON_REGISTRY_URL">Amazon</a>, <a href="$ETSY_REGISTRY_URL">Etsy</a>, <a href="$WAYFAIR_REGISTRY_URL">Wayfair</a>, and <a href="$WEST_ELM_REGISTRY_URL">West Elm</a>,</span><br>
-                        <span><i>or</i></span><br>
-                        <span>your gift to our <a href="$NEWLYWED_FUND_URL">newlywed fund</a></span><br>
-                        <span>would be greatly appreciated.</span>
-                    </div>
-                </div>
-
-                <div class="row__cell">
-                    <img alt="" src="" />
-                </div>
-            </section>
-
-            <section class="row row--6 row--light" id="rsvp">
-                <div class="row__cell">
-                    <div class="row__cell-content">
-                        <h2>RSVP</h2>
-                        <p>In order to allow all guests, including parents, an evening of relaxation we have chosen for our wedding day to be an adult only occasion. We hope this advance notice means you are still able to share our big day and will enjoy having the evening off!</p>
-                        <a href="#">Click here to RSVP</a>
-                    </div>
+            <section class="row row--rsvp" id="rsvp">
+                <div>
+                    <h2>RSVP</h2>
+                    <p>In order to allow all guests, including parents, an evening of relaxation we have chosen for our wedding day to be an adult only occasion. We hope this advance notice means you are still able to share our big day and will enjoy having the evening off!</p>
+                    <a href="https://goo.gl/forms/qDsVG5f4A33BiLQq2" rel="noopener noreferrer" target="_blank">Click here to RSVP</a>
                 </div>
             </section>
         </main>

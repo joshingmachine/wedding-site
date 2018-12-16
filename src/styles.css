@@ -1,3 +1,7 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 html {
     height: 100vh;
     width: 100vw;
@@ -20,22 +24,11 @@ a {
     display: inline;
 }
 
-img {
-    width: 100%;
-}
-
-.site-nav {
-    padding: 5px;
-    position: sticky;
-    top: 5px;
-}
-
-.site-nav__section + .site-nav__section:before {
-    content: '\00b7  ';
-}
-
-h1, h2 {
+h1,
+h2 {
     font-family: 'Dancing Script', cursive;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -62,21 +55,28 @@ main {
     width: 100%;
 }
 
+.site-nav {
+    padding: 5px;
+    position: sticky;
+    top: 5px;
+}
+
+.site-nav__section + .site-nav__section:before {
+    content: '\00b7  ';
+}
+
 .row {
-    align-items: stretch;
+    align-items: center;
     background-position: center;
     background-size: cover;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    min-height: 100vh;
+    padding: 0 20px;
     position: relative;
     text-align: center;
     width: 100%;
     z-index: 0;
-}
-
-.row--reverse {
-    flex-direction: row-reverse;
 }
 
 .row:before {
@@ -89,57 +89,58 @@ main {
     top: 0;
 }
 
-.row--light,
-.row--light a {
-    color: black;
+.row > * {
+    flex: 1 0 0;
+    max-width: 600px;
+    position: relative;
 }
 
-.row--light:before {
-    background: rgba(0, 0, 0, 0.10);
-}
-
-.row--1,
-.row--5 {
+.row--title {
     background-image: url($HERO_1_IMAGE);
+    z-index: 1,
 }
 
-.row--1 {
-    position: sticky;
-    top: -100%;
-    z-index: 1;
+.row--about {
+    justify-content: space-between;
+    padding: 0 20px 0 0;
 }
 
-.row--2 {
+.row--about img {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.wrapper--about-img {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+    order: 0;
+    overflow: hidden;
+}
+
+.wrapper--about-text {
+    order: 1;
+    margin: 0 60px 0 0;
+}
+
+.row--details {
     background-image: url($HERO_2_IMAGE);
 }
 
-.row--3 {
-    margin-top: -44px;
-    padding-top: 44px;
+.row--location {
+    justify-content: space-between;
+    padding: 0 0 0 20px;
 }
 
-.row--3:before {
-    background: rgba(0, 0, 0, 0);
+.wrapper--location-map {
+    align-self: stretch;
+    margin: 60px;
 }
 
-.row--4 {
-    background-image: url($HERO_4_IMAGE);
-}
-
-.row--6 {
-    background-image: url($HERO_6_IMAGE);
-}
-
-.row__cell {
-    align-items: center;
-    display: flex;
-    flex: 1 0;
-    justify-content: center;
-    min-height: 105vh;
-    min-width: 450px;
-    z-index: 1;
-}
-
-.row__cell-content {
-    margin: 20px;
+.row--gifts {
+    background-image: url($HERO_2_IMAGE);
 }
