@@ -10,6 +10,7 @@ html {
 body {
     background-color: #444;
     color: white;
+    font-family: 'Times New Roman', serif;
     font-size: 18px;
     margin: 0;
     max-width: 100%;
