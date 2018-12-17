@@ -55,6 +55,10 @@ main {
     width: 100%;
 }
 
+address {
+    margin: 10px 0 20px;
+}
+
 .site-nav {
     padding: 5px;
     position: sticky;
@@ -101,8 +105,8 @@ main {
 }
 
 .row--about {
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px 0 0;
 }
 
 .row--about img {
@@ -117,14 +121,16 @@ main {
     align-self: stretch;
     display: flex;
     justify-content: center;
-    margin: 60px;
+    margin: 10px;
+    min-width: 284px;
     order: 0;
     overflow: hidden;
 }
 
 .wrapper--about-text {
     order: 1;
-    margin: 0 60px 0 0;
+    margin: 0 auto;
+    min-width: 284px;
 }
 
 .row--details {
@@ -132,15 +138,48 @@ main {
 }
 
 .row--location {
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 0 0 20px;
+    padding: 0;
+}
+
+.wrapper--location-text {
+    margin: 0 auto;
+    min-width: 284px;
 }
 
 .wrapper--location-map {
     align-self: stretch;
-    margin: 60px;
+    min-width: 284px;
+    margin: 10px;
 }
 
 .row--gifts {
     background-image: url($HERO_2_IMAGE);
+}
+
+@media (min-width: 768px) {
+    .row--about {
+        padding: 0 20px 0 0;
+    }
+
+    .wrapper--about-text {
+        margin: 0 60px 0 0;
+    }
+
+    .wrapper--about-img {
+        margin: 60px;
+    }
+
+    .row--location {
+        padding: 0 0 0 20px;
+    }
+
+    .wrapper--location-text {
+        margin: 0 0 0 60px;
+    }
+
+    .wrapper--location-map {
+        margin: 60px;
+    }
 }
